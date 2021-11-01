@@ -40,12 +40,12 @@ $$
 
 #### Figure
 
-![2d_burgers_u](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case6_2d_burgers\2d_burgers_u.jpg)
+![2d_burgers_u](2d_burgers_u.jpg)
 
-![2d_burgers_v](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case6_2d_burgers\2d_burgers_v.jpg)
+![2d_burgers_v](2d_burgers_v.jpg)
 
 Figure: Comparison of a short time predictions from LNSN and the standard CNN. The first row shows the numerical results, second row shows the predictions obtained by LNSN, and the last row shows that of CNN.
 
-![2d_burgers_error](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case6_2d_burgers\2d_burgers_error.jpg)
+![2d_burgers_error](2d_burgers_error.jpg)
 
 Figure: Prediction error of the LNSN and the standard CNN. The shadow area indicates the minimum and maximum error among $1000$ test samples.

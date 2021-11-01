@@ -68,4 +68,4 @@ The dataset from first initial condition (```u_initial[0]```) is used for traini
 
 #### Plot:
 
-![1d_burgers](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case2_1d_burgers\1d_burgers.jpg)
+![1d_burgers](1d_burgers.jpg)

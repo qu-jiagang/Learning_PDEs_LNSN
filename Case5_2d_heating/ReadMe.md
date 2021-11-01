@@ -36,11 +36,11 @@ $$
 
 * `report.py`: plot error varying with time
 
-![2d_heat](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case5_2d_heating\2d_heat.jpg)
+![2d_heat](2d_heat.jpg)
 
 Figure: Comparison of the predictions from numerical simulations and the linear CNN. The first row shows the numerical results, second row shows the predictions with a small time step $\delta t=0.001$, and the last row shows that with a larger time step $\delta t=0.01$.
 
-![2d_heat_error](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case5_2d_heating\2d_heat_error.png)
+![2d_heat_error](2d_heat_error.png)
 
 Figure: Prediction error of the linear CNN for time step value of $\delta t=0.001$ and $\delta t=0.01$. The shadow area indicates the minimum and maximum error among $1000$ test samples.
 

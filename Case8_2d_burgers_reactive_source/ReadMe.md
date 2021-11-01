@@ -38,17 +38,11 @@ $$
 
 #### Figure
 
-![2d_burgers_source_v](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case8_2d_burgers_reactive_source\2d_burgers_source_v.jpg)![2d_burgers_source_u](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case8_2d_burgers_reactive_source\2d_burgers_source_u.jpg)
+![2d_burgers_source_v](2d_burgers_source_v.jpg)![2d_burgers_source_u](2d_burgers_source_u.jpg)
 
-Figure: Comparison of a short time predictions from LNSN and the standard CNN. The first row shows the numerical results, second row shows the predictions obtained by LNSN, and the last row shows that of CNN.
+Figure: Comparison of the predictions from LNSN and the standard CNN. The first row shows the numerical results, second row shows the predictions obtained by LNSN, and the last row shows that of CNN.
 
-![2d_burgers_source_u_long](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case8_2d_burgers_reactive_source\2d_burgers_source_u_long.jpg)
-
-![2d_burgers_source_v_long](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case8_2d_burgers_reactive_source\2d_burgers_source_v_long.jpg)
-
-Figure: Comparison of a long time predictions from numerical simulations and the LNSN. The first row shows the numerical results, second row shows the predictions obtained by LNSN, and the last row shows the absolute error.
-
-![2d_burgers_source_error](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case8_2d_burgers_reactive_source\2d_burgers_source_error.jpg)
+![2d_burgers_source_error](2d_burgers_source_error.jpg)
 
 Figure: Prediction error of the LNSN and the standard CNN. The shadow area indicates the minimum and maximum error among $1000$ test samples.
 
@@ -75,52 +69,53 @@ Table: The RME for LNSN predictions at $t = 3\ s$.
 	    <td>Max</td>
     </tr>
     <tr>
-        <td>8</td>
-        <td>>10</td>
-        <td>0.052</td>
-	    <td>>10</td>
-        <td>>10</td>
-        <td>0.069</td>
-	    <td>>10</td>
-        <td>1.764</td>
-        <td>0.050</td>
-	    <td>>10</td>
+        <td> 8 </td>
+        <td> >10<sup>6 </td>
+        <td> 0.110 </td>
+	    <td> >10<sup>7 </td>
+        <td> >10<sup>2 </td>
+        <td> 0.017 </td>
+	    <td> >10<sup>3 </td>
+        <td> 0.106 </td>
+        <td> 0.018 </td>
+	    <td> 0.741 </td>
     </tr>
     <tr>
-        <td>16</td>
-        <td>>0.177</td>
-        <td>0.048</td>
-	    <td>0.852</td>
-        <td>0.106</td>
-        <td>0.139</td>
-	    <td>0.766</td>
-        <td>0.246</td>
-        <td>0.023</td>
-	    <td>>10</td>
+        <td> 16 </td>
+        <td>> 1.378 </td>
+        <td> 0.048 </td>
+	    <td> 33.602 </td>
+        <td> 0.180 </td>
+        <td> 0.032 </td>
+	    <td> 0.815 </td>
+        <td> 0.128 </td>
+        <td> 0.015 </td>
+	    <td> 0.766 </td>
     </tr>
     <tr>
-        <td>32</td>
-        <td>0.203</td>
-        <td>0.033</td>
-	    <td>0.810</td>
-        <td>0.116</td>
-        <td>0.040</td>
-	    <td>0.730</td>
-        <td>0.189</td>
-        <td>0.021</td>
-	    <td>8.212</td>
+        <td> 32 </td>
+        <td> 0.434 </td>
+        <td> 0.030 </td>
+	    <td> 5.611 </td>
+        <td> 0.349 </td>
+        <td> 0.018 </td>
+	    <td> 5.716 </td>
+        <td> 0.154 </td>
+        <td> 0.019 </td>
+	    <td> 1.318 </td>
     </tr>
     <tr>
-        <td>64</td>
-        <td>2.034</td>
-        <td>0.026</td>
-	    <td>0.146</td>
-        <td>>10</td>
-        <td>0.050</td>
-	    <td>>10</td>
-        <td>0.395</td>
-        <td>0.027</td>
-	    <td>>10</td>
+        <td> 64 </td>
+        <td> 0.118 </td>
+        <td> 0.010 </td>
+	    <td> 2.203 </td>
+        <td> 1.702 </td>
+        <td> 0.021 </td>
+	    <td> >10<sup>2 </td>
+        <td> 0.123 </td>
+        <td> 0.012 </td>
+	    <td> 1.018 </td>
     </tr>
+
 
 

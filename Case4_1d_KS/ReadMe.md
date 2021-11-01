@@ -27,5 +27,4 @@ where `U[0,1)` represent random samples from a uniform distribution over `0, 1)`
 
 #### PLOT
 
-![Fig](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case4_1d_KS\Fig.png)
-
+![1d_KS](1d_KS.jpg)

@@ -46,4 +46,4 @@ The dataset from first initial condition (```u_initial[0]```) is used for traini
 
 #### PLOT
 
-![Fig](C:\Users\qujiagang\Documents\我的坚果云\Learning_PDEs\Case3_1d_allen-cahn\Fig.png)
+![1d_allen-cahn](1d_allen-cahn.jpg)
