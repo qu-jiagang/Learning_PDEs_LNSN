@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 from torch.autograd import Variable
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 class Net(nn.Module):
@@ -13,14 +14,14 @@ class Net(nn.Module):
         return x
 
 
-Ts = 1000
-NX = 402
-
 Network = torch.load('LNSN.net')
 Network.eval()
 print(Network)
 
-for no in range(3):
+Ts = 1000
+NX = 128
+
+for no in range(0,6):
     print(no)
 
     recon = np.zeros((Ts,NX))

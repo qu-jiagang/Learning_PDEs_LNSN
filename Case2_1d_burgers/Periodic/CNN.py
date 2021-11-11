@@ -1,3 +1,4 @@
+# Single-step network (SSN)
 # for 1d-Burgers equation with Dirichlet boundary condition
 
 import torch
@@ -6,6 +7,10 @@ import torch.optim as optim
 import torch.nn.functional as F
 from torch.autograd import Variable
 import numpy as np
+from torch.utils.data import DataLoader, TensorDataset
+import matplotlib.pyplot as plt
+from math import *
+
 
 node = 128
 
@@ -30,29 +35,34 @@ def loss_func(determination, x):
     return loss
 
 
-NX = 402
+NX = 128
 data = np.fromfile('../dataset/1d_burgers_Periodic_0.dat').reshape([1, 10001, NX])[:,::10]
 
+
 Network = Net().cuda()
-optimizer = optim.Adam(Network.parameters(), lr=1.0e-4)
+optimizer = optim.Adam(Network.parameters(), lr=1.0e-1)
 
 data = torch.from_numpy(data).float()
 train_data_input  = Variable(data[:, :10].reshape((-1,1,NX))).cuda()
 train_data_output = Variable(data[:,1:11].reshape((-1,1,NX))).cuda()
 
-loss_base, epoch = 1.0, -1
-while epoch < 1000000:
-    epoch = epoch + 1
-    x_reconst = Network(train_data_input)
-    loss = loss_func(x_reconst, train_data_output)
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
-    loss = loss.cpu().data.numpy()
+loss_sum = []
+if __name__ == '__main__':
 
-    print('Case 2P:', epoch, loss)
+    loss_base, epoch = 1.0, -1
+    while epoch < 1000000:
+        epoch = epoch + 1
+        x_reconst = Network(train_data_input)
+        loss = loss_func(x_reconst, train_data_output)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        loss = loss.cpu().data.numpy()
+        loss_sum.append(loss)
 
-    if epoch > 0 and loss < loss_base:
-        loss_base = loss
-        torch.save(Network, 'CNN.net')
+        print('Case 2P:', epoch, loss)
+
+        if epoch > 0 and loss < loss_base:
+            loss_base = loss
+            torch.save(Network, 'CNN.net')
 

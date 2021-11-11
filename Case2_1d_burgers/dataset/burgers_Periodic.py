@@ -25,31 +25,26 @@ def RHS(spectral_u, K, on):
 
 Re = 100
 nu = 1./Re
-NX = int(128*pi)
+NX = 256
 print(NX)
-LX = 2*pi
+LX = 2
 deltaX = LX/(NX-1)
 ds = 0.001        # time step;
 Ts = 10001
-q = np.zeros(3)
-q[0] =  1/Re*  ds/deltaX/deltaX
-q[1] = -1/Re*2*ds/deltaX/deltaX+1
-q[2] =  1/Re*  ds/deltaX/deltaX
-print(q)
 
-complex_k = numpy.linspace(-NX/2,NX/2,NX,endpoint=False)*1j
-k = numpy.linspace(-NX/2,NX/2,NX,endpoint=False)
+k = numpy.linspace(-NX/2,NX/2,NX,endpoint=False)/(LX/(2*pi))
+complex_k = k*1j
 
-x = numpy.linspace(-1,1,NX)
+x = numpy.linspace(-1,1,NX,endpoint=False)
 
-for no in range(6):
+for no in range(3):
     print(no)
 
     # 3 different initial conditions
     u_initial = np.zeros([3,NX])
     u_initial[0] = -np.sin(pi*x)
-    u_initial[1] = -10*x*(1+x)*(1-x)/(1+np.exp(10*x**2))
-    u_initial[2] = -2*x/(1+np.sqrt(1/np.exp(100/8))*np.exp(100*x**2/4))
+    u_initial[2] = -10*x*(1+x)*(1-x)/(1+np.exp(10*x**2))
+    u_initial[4] = -2*x/(1+np.sqrt(1/np.exp(100/8))*np.exp(100*x**2/4))
 
     # initial condition
     u = u_initial[no]
@@ -70,4 +65,11 @@ for no in range(6):
 
         sum_u[step+1] = np.real(u)
 
-    sum_u.tofile('1d_burgers_Periodic_'+str(no)+'.dat')
+    # x = x.reshape(NX,)
+    data_line = np.zeros((Ts,128))
+    xx = np.linspace(-1,1,128,endpoint=False)
+    for i in range(Ts):
+        f = interpolate.interp1d(x,sum_u[i],kind='quadratic')
+        data_line[i] = f(xx)
+
+    data_line.tofile('1d_burgers_Periodic_'+str(no)+'.dat')
